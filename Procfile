@@ -1,1 +1,1 @@
-web: gunicorn app_run:gittesting
+web: gunicorn app_run:app
