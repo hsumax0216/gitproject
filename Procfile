@@ -1,1 +1,1 @@
-web: gunicorn TestCalculator:app
+web: gunicorn flasky:app

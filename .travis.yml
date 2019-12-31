@@ -21,7 +21,8 @@ script: true
   
  # Another command/method to run tests
 script: 
-  - python TestCalculator.py
+  - python flasky.py
+  #Procfile flasky(app_run):app
  
 deploy:
   provider: heroku
