@@ -3,8 +3,10 @@
 #示範Git用的程式碼！
 
 #import python的unittest
+from flask import Flask
 import unittest
 import Calculator as calculator
+app = Flask(__name__)
 class TestCalculator(unittest.TestCase):
     def test_int_add(self):
         self.assertEqual(calculator.add(9, 3), 12)
@@ -42,5 +44,11 @@ class TestCalculator(unittest.TestCase):
     def test_float_divided(self):
         self.assertEqual(calculator.divided(5.4, 3), 1.8)
 
-if __name__ == '__main__':
-    unittest.main()
+@app.route('/')
+def index():
+	unittest.main(exit=False)
+	return 'unittest was passed'
+
+if (__name__ == "__main__"):
+    app.run()
+	#print(str(unittest.main(exit=False)))
